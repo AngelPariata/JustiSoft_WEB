@@ -26,6 +26,7 @@
     $respuesta = $_SESSION['Mensaje']; ?>
     <script>
     Swal.fire({
+    position: "top-end",
     icon: "error",
     title: '<?php echo $respuesta;?>',
     showConfirmButton: false,
@@ -44,7 +45,7 @@
   <br>
   <div class="card card-outline card-primary">
     <div class="card-header text-center">
-      <a href="../Public/Templates/AdminLTE-3.2.0/index2.html" class="h1"><b>JustiSoft</b></a>
+      <a class="h1"><b>JustiSoft</b></a>
     </div>
     <div class="card-body">
       <p class="login-box-msg">Login</p>
