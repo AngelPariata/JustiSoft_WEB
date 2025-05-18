@@ -32,7 +32,7 @@ if ($Email && $Password_US) {
         header('Location: '.$URL.'/Index.php');
 
     } else {
-        
+        session_start();
         $_SESSION['Mensaje'] = "Usuario o Password Incorrectos ";
         header('Location: '.$URL.'/Login');
     }

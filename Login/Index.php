@@ -22,17 +22,17 @@
   <!-- /.login-logo -->
   <?php
     session_start();
-      if(isset($_SESSION['Mensaje'])){
-      $respuesta = $_SESSION['Mensaje']; ?>
-      <script>
-       Swal.fire({
-       position: "top-end",
-       icon: "error",
-       title: '<?php echo $respuesta;?>',
-       showConfirmButton: false,
-       timer: 5000
-       })
-      </script>
+    if(isset($_SESSION['Mensaje'])){
+    $respuesta = $_SESSION['Mensaje']; ?>
+    <script>
+    Swal.fire({
+    position: "top-end",
+    icon: "error",
+    title: '<?php echo $respuesta;?>',
+    showConfirmButton: false,
+    timer: 5000
+    })
+    </script>
 
   <?php
   }
