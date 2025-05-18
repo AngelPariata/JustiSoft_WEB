@@ -26,7 +26,6 @@
     $respuesta = $_SESSION['Mensaje']; ?>
     <script>
     Swal.fire({
-    position: "top-end",
     icon: "error",
     title: '<?php echo $respuesta;?>',
     showConfirmButton: false,
