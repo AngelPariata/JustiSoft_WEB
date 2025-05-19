@@ -20,32 +20,41 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <!-- /.login-logo -->
+  <!-- /.alerta de usuario o contraseña invalida -->
   <?php
     session_start();
     if(isset($_SESSION['Mensaje'])){
     $respuesta = $_SESSION['Mensaje']; ?>
     <script>
     Swal.fire({
-    position: "top-end",
     icon: "error",
-    title: '<?php echo $respuesta;?>',
-    showConfirmButton: false,
-    timer: 5000
-    })
+    title: "Oops...",
+    text: "<?php echo $respuesta; ?>",
+    footer: '<a href="#">Desea recuperar su usuario o contraseña?</a>'
+    });
     </script>
 
   <?php
   }
   ?>
 
-  <center>
-  <img src="https://img.freepik.com/vector-gratis/ilustracion-concepto-bufete-abogados_114360-8869.jpg?ga=GA1.1.273294074.1747420627&semt=ais_hybrid&w=740" 
-  alt="" width="250px">
-  </center>
+  <div style="
+    background-image: url('https://tuappbogado.es/wp-content/uploads/2017/07/el-abogado-online.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 78vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: ;
+    z-index: -1;">
+</div>
+
   <br>
   <div class="card card-outline card-primary">
     <div class="card-header text-center">
-      <a href="../Public/Templates/AdminLTE-3.2.0/index2.html" class="h1"><b>JustiSoft</b></a>
+      <p class="h2">JustiSoft</p>
     </div>
     <div class="card-body">
       <p class="login-box-msg">Login</p>
@@ -83,8 +92,26 @@
   </div>
   <!-- /.card -->
 </div>
-<!-- /.login-box -->
-
+<!-- /.Contenedores inferiores -->
+<div class="container text-center" style="position: relative; top: 70px;">
+  <div class="row align-items-end">
+    <div class="col" style="background-color: rgb(89, 120, 173); padding: 20px; transition: transform 0.3s, box-shadow 0.3s;"
+         onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0px 4px 10px rgba(0,0,0,0.3)'"
+         onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'">
+      ORGANIZA
+    </div>
+    <div class="col" style="background-color: rgb(71, 106, 168); padding: 20px; transition: transform 0.3s, box-shadow 0.3s;"
+         onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0px 4px 10px rgba(0,0,0,0.3)'"
+         onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'">
+      ADMINISTRA
+    </div>
+    <div class="col" style="background-color: rgb(51, 91, 160); padding: 20px; transition: transform 0.3s, box-shadow 0.3s;"
+         onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0px 4px 10px rgba(0,0,0,0.3)'"
+         onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'">
+      Y PROCESA LA JUSTICIA
+    </div>
+  </div>
+</div>
 <!-- jQuery -->
 <script src="../Public/Templates/AdminLTE-3.2.0/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
